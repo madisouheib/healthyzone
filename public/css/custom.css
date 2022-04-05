@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400&display=swap');
+
+body {
+
+    font-family: 'Tajawal', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 , p ,a ,button , li, strong , .btn , th , td , label  {
+    font-family: 'Tajawal', sans-serif;
+
+}
+.app-container .content-container .side-menu .navbar-nav li a {
+
+    font-family: 'Tajawal', sans-serif;
+}
