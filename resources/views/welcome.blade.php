@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slide-item-img">
+                            <div class="slide-item-img" style="margin-top:20px">
                                 <img src="{{ Voyager::image( $slider->slider_image ) }}" alt="#">
                             </div>
                         </div>
