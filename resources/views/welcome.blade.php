@@ -6,7 +6,7 @@
    <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
     <div class="ltn__utilize-menu-inner ltn__scrollbar">
         <div class="ltn__utilize-menu-head">
-            <span class="ltn__utilize-menu-title">Cart</span>
+            <span class="ltn__utilize-menu-title">Ceeart</span>
             <button class="ltn__utilize-close">×</button>
         </div>
         <div class="mini-cart-product-area ltn__scrollbar">
@@ -26,7 +26,7 @@
                     <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
                 </div>
                 <div class="mini-cart-info">
-                    <h6><a href="#">Vegetables Juices</a></h6>
+                    <h6><a href="#">Vegetables Judddices</a></h6>
                     <span class="mini-cart-quantity">1 x $85.00</span>
                 </div>
             </div>
@@ -217,14 +217,14 @@
                     <div class="col-lg-12">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
+                                <a href="/"><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
+                                <a href="/"><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
@@ -264,17 +264,17 @@
                                 <div class="col-lg-12">
                                     <div class="ltn__product-item ltn__product-item-3 text-center">
                                         <div class="product-img">
-                                            <a href="product-details.html"><img src="{{ Voyager::image( $plat->image ) }}" alt="#"></a>
+                                            <a href="#" data-toggle="modal"  @click="PushIdProduct({{ $plat->id }})"  data-target="#quick_view_modal"><img src="{{ Voyager::image( $plat->image ) }}" alt="#"></a>
                                        
                                             <div class="product-hover-action">
                                                 <ul>
                                                     <li>
-                                                        <a href="#" title="Quick View" data-toggle="modal" data-target="#quick_view_modal">
+                                                        <a href="#" title="Quick View" data-toggle="modal"  @click="PushIdProduct({{ $plat->id }})"  data-target="#quick_view_modal" >
                                                             <i class="far fa-eye"></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" title="Add to Cart" data-toggle="modal" data-target="#add_to_cart_modal">
+                                                        <a href="#" title="Add to Cart" data-toggle="modal"  @click="PushIdProduct({{ $plat->id }})"  data-target="#quick_view_modal" >
                                                             <i class="fas fa-shopping-cart"></i>
                                                         </a>
                                                     </li>
@@ -317,6 +317,9 @@
 </div>
 <!-- PRODUCT TAB AREA END -->
 
+
+
+
 <!-- COUNTDOWN AREA START -->
 <div class="ltn__call-to-action-area ltn__call-to-action-4 section-bg-1 pt-110 pb-120">
     <div class="container">
@@ -357,7 +360,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div class="ltn__product-item ltn__product-item-3 text-left">
                     <div class="product-img">
-                        <a href="product-details.html"><img src="{{ Voyager::image( $feature->image ) }}" alt="#"></a>
+                        <a href="/"><img src="{{ Voyager::image( $feature->image ) }}" alt="#"></a>
                         <div class="product-badge">
                             <ul>
                                 <li class="sale-badge">مميز</li>
@@ -366,7 +369,7 @@
                         <div class="product-hover-action">
                             <ul>
                                 <li>
-                                    <a href="#" title="Quick View" data-toggle="modal" data-target="#quick_view_modal">
+                                    <a  title="Quick View" data-toggle="modal" data-target="#quick_view_modal">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </li>
@@ -404,6 +407,12 @@
     </div>
 </div>
 <!-- PRODUCT AREA END -->
+  <!-- MODAL AREA START (Wishlist Modal) -->
+  <modal-product ref="product"> </modal-product>
+
+
+
+
 
 <!-- VIDEO AREA START -->
 <div class="ltn__video-popup-area ltn__video-popup-margin">

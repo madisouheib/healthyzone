@@ -27,7 +27,24 @@ class HomeController extends Controller
         $countDonw = Countdown::where('active',true)->first();
         $values = Prop::all();
 
-        return view('welcome')->with('sliders',$sliders)->with('menus',$menus)->with('plats',$plats)->with('featured',$featured)->with('feedbacks',$feedbacks)->with('banners',$banners)->with('ads',$countDonw)->with('values',$values);
+        return view('welcome')
+        ->with('sliders',$sliders)
+        ->with('menus',$menus)
+        ->with('plats',$plats)
+        ->with('featured',$featured)
+        ->with('feedbacks',$feedbacks)
+        ->with('banners',$banners)
+        ->with('ads',$countDonw)
+        ->with('values',$values);
 
+    }
+
+
+    public function infoProduct($id){
+
+        $plat = Plats::leftJoin('categories','categories.id','=','posts.category_id')->where('posts.id',$id)->first();
+
+        return response()->json($plat);
+        
     }
 }

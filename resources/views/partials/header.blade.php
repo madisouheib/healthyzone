@@ -11,7 +11,7 @@
                     <div class="col-md-7">
                         <div class="ltn__top-bar-menu">
                             <ul>
-                                <li><a href="locations.html"><i class="icon-placeholder"></i> جدة السعودية</a></li>
+                                <li><a href="#"><i class="icon-placeholder"></i> جدة السعودية</a></li>
                                 <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i> contact@healthyzone.sa</a></li>
                             </ul>
                         </div>
