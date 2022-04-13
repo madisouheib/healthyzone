@@ -178,21 +178,21 @@
             <div class="col-lg-4 col-md-6">
                 <div class="ltn__banner-item">
                     <div class="ltn__banner-img">
-                        <a href="shop.html"><img src="{{ Voyager::image( $banners[0]->ads_image ) }}" alt="Banner Image"></a>
+                        <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[0]->ads_link }}" ><img src="{{ Voyager::image( $banners[0]->ads_image ) }}" alt="Banner Image"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="ltn__banner-item">
                     <div class="ltn__banner-img">
-                        <a href="shop.html"><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
+                        <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[1]->ads_link }}" ><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="ltn__banner-item">
                     <div class="ltn__banner-img">
-                        <a href="shop.html"><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
+                        <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[2]->ads_link }}" ><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
                     </div>
                 </div>
             </div>
@@ -208,7 +208,7 @@
             <div class="col-lg-6 col-md-6">
                 <div class="ltn__banner-item">
                     <div class="ltn__banner-img">
-                        <a href="#"><img src="{{ Voyager::image( $banners[0]->ads_image ) }}" alt="Banner Image"></a>
+                        <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[0]->ads_link }}"><img src="{{ Voyager::image( $banners[0]->ads_image ) }}" alt="Banner Image"></a>
                     </div>
                 </div>
             </div>
@@ -217,14 +217,14 @@
                     <div class="col-lg-12">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="/"><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
+                                <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[1]->ads_link }}"><img src="{{ Voyager::image( $banners[1]->ads_image ) }}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="/"><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
+                                <a href="'whatsapp://send?abid=+966580401721&text='{{ $banners[2]->ads_link }}"><img src="{{ Voyager::image( $banners[2]->ads_image ) }}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
@@ -254,13 +254,15 @@
                 </div>
                 <div class="tab-content">
               
+                    @foreach ($menus as $column)
 
               
-                    <div class="tab-pane fade active show" id="liton_tab_3_1">
+                    <div class="tab-pane fade active show" id="{{ '#catg'.$column->id }}">
                         <div class="ltn__product-tab-content-inner">
                             <div class="row ltn__tab-product-slider-one-active slick-arrow-1">
                                 <!-- ltn__product-item -->
                                 @foreach($plats as $plat)
+                                @if($column->id == $plat->category_id)
                                 <div class="col-lg-12">
                                     <div class="ltn__product-item ltn__product-item-3 text-center">
                                         <div class="product-img">
@@ -302,6 +304,7 @@
                                     </div>
                                   
                                 </div>
+                                @endif
                                 @endforeach
                            
                                 <!-- ltn__product-item -->
@@ -310,6 +313,8 @@
                             </div>
                         </div>
                     </div>
+@endforeach
+                    
                 </div>
             </div>
         </div>
@@ -419,8 +424,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="ltn__video-bg-img ltn__video-popup-height-600 bg-overlay-black-10-- bg-image" data-bg="img/bg/15.jpg">
-                    <a class="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/ATI7vfCgwXE?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
+                <div class="ltn__video-bg-img ltn__video-popup-height-600 bg-overlay-black-10-- bg-image" data-bg=" {{ setting('site.bgvedio')}} ">
+                    <a class="ltn__video-icon-2 ltn__video-icon-2-border" href=" {{ setting('site.vedio')}} " data-rel="lightcase:myCollection">
                         <i class="fa fa-play"></i>
                     </a>
                 </div>

@@ -64,25 +64,9 @@
                         <!-- header-search-1 -->
                  
                         <!-- user-menu -->
-                        <div class="ltn__drop-menu user-menu">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="icon-user"></i></a>
-                                    <ul>
-                                        <li><a href="{{ url('/admin')}}"> تسجيل الدخول</a></li>
-                                  
-             
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                 
                         <!-- mini-cart -->
-                        <div class="mini-cart-icon">
-                            <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
-                                <i class="icon-shopping-cart"></i>
-                                <sup>2</sup>
-                            </a>
-                        </div>
+                      
                         <!-- mini-cart -->
                         <!-- Mobile Menu Button -->
                         <div class="mobile-menu-toggle d-xl-none">
